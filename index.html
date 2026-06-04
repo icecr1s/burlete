@@ -120,10 +120,9 @@
       
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Producto 1 -->
-        <div class="producto-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100">
-          <div class="h-44 overflow-hidden">
-            <img class="w-full h-full object-cover" loading="lazy" src="img/BAI004.jpg" alt="Burlete BAI 004">
-          </div>
+        <div class="h-auto aspect-square overflow-hidden cursor-zoom" onclick="openModal(this.querySelector('img').src)">
+          <img class="w-full h-full object-contain bg-slate-50 transition-transform duration-500 hover:scale-110" loading="lazy" src="img/BAI004.jpg" alt="Burlete BAI 004">
+        </div>
           <div class="p-5">
             <h3 class="font-bold mb-2 text-lg" style="color: rgb(0, 86, 179);">BAI 004</h3>
             <p class="text-sm text-gray-600">Burlete industrial fabricado a medida, diseñado para ofrecer un sellado óptimo y prolongar la vida útil de su equipo.</p>
