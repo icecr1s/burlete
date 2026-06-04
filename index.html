@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>burlete.cl - Fábrica de Burletes Industriales</title>
+  
+  <!-- Librerías de Estilos e Iconos -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Personalizado -->
+  <style>
+        body { font-family: 'Work Sans', sans-serif; background-color: #ffffff; }
+        .hero-section {
+            position: relative;
+            min-height: calc(70 * min(var(--vh, 1vh), 1vh));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(0,40,90,0.85), rgba(0,86,179,0.7));
+            z-index: 1;
+        }
+        .hero-section img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-content { position: relative; z-index: 2; text-align: center; padding: 2rem; }
+
+        .producto-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .producto-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0,86,179,0.15);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .feature-item, .benefit-item {
+            transition: background 0.3s, transform 0.3s;
+        }
+        .feature-item:hover {
+            background: #e0ecff;
+            transform: translateX(4px);
+        }
+        .benefit-item:hover {
+            background: #d6e4ff;
+            transform: translateX(4px);
+        }
+
+        .marca-badge {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .marca-badge:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+        }
+        
+        /* Efecto profesional para los logos */
+        .logo-img {
+            filter: grayscale(100%) opacity(70%);
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }
+        .marca-badge:hover .logo-img {
+            filter: grayscale(0%) opacity(100%);
+        }
+  </style>
+</head>
+<body class="w-full text-slate-800">
+
+  <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+  <a href="https://wa.me/56923948323?text=Hola,%20necesito%20cotizar%20un%20burlete%20industrial" 
+     class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 hover:scale-110 transition-all z-50 flex items-center justify-center"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Contactar por WhatsApp">
+     <i data-lucide="message-circle" class="w-8 h-8"></i>
+  </a>
+
+  <!-- HERO -->
+  <header class="hero-section">
+    <img loading="lazy" src="https://images.pexels.com/photos/14804699/pexels-photo-14804699.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Instalaciones industriales con maquinaria para manufactura">
+    <div class="hero-content max-w-3xl mx-auto">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-4 text-white">burlete.cl</h1>
+      <p class="text-xl md:text-2xl mb-8 opacity-90 text-white">Fábrica de Burletes Industriales en Chile</p>
+      <p class="text-base md:text-lg leading-relaxed opacity-90 max-w-2xl mx-auto text-white mb-8">
+        Somos especialistas en la fabricación de burletes industriales de alta resistencia, diseñados para garantizar sellado, seguridad y continuidad operativa. Fabricamos bajo pedido y despachamos a todo Chile.
+      </p>
+      <a href="https://wa.me/56923948323?text=Hola,%20necesito%20cotizar%20un%20burlete%20industrial" target="_blank" rel="noopener noreferrer" class="inline-block bg-white text-blue-800 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-blue-50 transition-colors">
+        Cotizar ahora
+      </a>
+    </div>
+  </header>
+
+  <main class="w-full">
+    <!-- PRODUCTOS -->
+    <section class="py-20 px-6 md:px-12 max-w-7xl mx-auto fade-in">
+      <h2 class="text-center font-bold mb-4 text-2xl" style="color: rgb(0, 86, 179);">🔧 Nuestros Productos</h2>
+      <p class="text-center max-w-3xl mx-auto mb-12 text-gray-600">
+        Fabricamos burletes en diferentes perfiles, densidades y materiales según la necesidad de cada cliente. Trabajamos con estándares de calidad que aseguran durabilidad y resistencia térmica.
+      </p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Producto 1 -->
+        <div class="producto-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100">
+          <div class="h-44 overflow-hidden">
+            <img class="w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/12951633/pexels-photo-12951633.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Burlete BAI 004">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold mb-2 text-lg" style="color: rgb(0, 86, 179);">BAI 004</h3>
+            <p class="text-sm text-gray-600">Burlete industrial fabricado a medida, diseñado para ofrecer un sellado óptimo y prolongar la vida útil de su equipo.</p>
+          </div>
+        </div>
+        <!-- Producto 2 -->
+        <div class="producto-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100">
+          <div class="h-44 overflow-hidden">
+            <img class="w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/36449548/pexels-photo-36449548.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Burlete BAI 022">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold mb-2 text-lg" style="color: rgb(0, 86, 179);">BAI 022</h3>
+            <p class="text-sm text-gray-600">Perfil de alta calidad y durabilidad, fabricado bajo estándares exigentes para uso industrial.</p>
+          </div>
+        </div>
+        <!-- Producto 3 -->
+        <div class="producto-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100">
+          <div class="h-44 overflow-hidden">
+            <img class="w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/4238222/pexels-photo-4238222.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Burlete BAI 087">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold mb-2 text-lg" style="color: rgb(0, 86, 179);">BAI 087</h3>
+            <p class="text-sm text-gray-600">Solución de sellado confiable, adaptable a diferentes equipos y condiciones de trabajo continuo.</p>
+          </div>
+        </div>
+        <!-- Producto 4 -->
+        <div class="producto-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100">
+          <div class="h-44 overflow-hidden">
+            <img class="w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/14804699/pexels-photo-14804699.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Burlete BAI 546">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold mb-2 text-lg" style="color: rgb(0, 86, 179);">BAI 546</h3>
+            <p class="text-sm text-gray-600">Burlete de alta resistencia, ideal para maquinaria industrial y equipos que requieren sellado firme y estable.</p>
+          </div>
+        </div>
+        <!-- Producto 5 -->
+        <div class="producto-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100">
+          <div class="h-44 overflow-hidden">
+            <img class="w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/9302309/pexels-photo-9302309.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Burlete BAI 554">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold mb-2 text-lg" style="color: rgb(0, 86, 179);">BAI 554</h3>
+            <p class="text-sm text-gray-600">Perfil versátil, recomendado para puertas, cámaras, hornos y sistemas que necesitan aislamiento térmico.</p>
+          </div>
+        </div>
+        <!-- Producto 6 -->
+        <div class="producto-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100">
+          <div class="h-44 overflow-hidden">
+            <img class="w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/20552667/pexels-photo-20552667.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Burlete BAI 2053">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold mb-2 text-lg" style="color: rgb(0, 86, 179);">BAI 2053</h3>
+            <p class="text-sm text-gray-600">Modelo diseñado para aplicaciones donde se requiere flexibilidad y sellado hermético en espacios reducidos.</p>
+          </div>
+        </div>
+        <!-- Producto 7 -->
+        <div class="producto-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100">
+          <div class="h-44 overflow-hidden">
+            <img class="w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/4820841/pexels-photo-4820841.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Burlete BAI 3108">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold mb-2 text-lg" style="color: rgb(0, 86, 179);">BAI 3108</h3>
+            <p class="text-sm text-gray-600">Burlete especializado, enfocado en mantener la continuidad operativa con materiales de alta resistencia.</p>
+          </div>
+        </div>
+        <!-- Producto 8 -->
+        <div class="producto-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100">
+          <div class="h-44 overflow-hidden">
+            <img class="w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/29834252/pexels-photo-29834252.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Burlete BAI 2061">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold mb-2 text-lg" style="color: rgb(0, 86, 179);">BAI 2061</h3>
+            <p class="text-sm text-gray-600">Diseño eficiente para asegurar el cierre hermético y la protección de su maquinaria industrial.</p>
+          </div>
+        </div>
+        <!-- Producto 9 -->
+        <div class="producto-card bg-white rounded-xl overflow-hidden shadow-md border border-slate-100">
+          <div class="h-44 overflow-hidden">
+            <img class="w-full h-full object-cover" loading="lazy" src="https://images.pexels.com/photos/10039994/pexels-photo-10039994.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Burlete BAI 2726">
+          </div>
+          <div class="p-5">
+            <h3 class="font-bold mb-2 text-lg" style="color: rgb(0, 86, 179);">BAI 2726</h3>
+            <p class="text-sm text-gray-600">Perfil técnico desarrollado a medida para satisfacer las necesidades de aislamiento y seguridad térmica.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMPATIBILIDAD CON IMÁGENES -->
+      <div class="mt-16 text-center p-8 bg-slate-50 rounded-2xl fade-in border border-slate-200">
+        <h3 class="font-bold mb-2 text-xl" style="color: rgb(0, 86, 179);">Compatibilidad de Marcas</h3>
+        <p class="mb-6 text-gray-600"><em>Consulte sobre más modelos; tenemos compatibilidad con las siguientes marcas:</em></p>
+        
+        <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-4 max-w-5xl mx-auto">
+          <!-- Reemplaza el src con la ruta de tus logos -->
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="https://placehold.co/150x60/ffffff/334155?text=TRUE" alt="Logo TRUE" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="https://placehold.co/150x60/ffffff/334155?text=KOLPAK" alt="Logo KOLPAK" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="https://placehold.co/150x60/ffffff/334155?text=Delfield" alt="Logo Delfield" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="https://placehold.co/150x60/ffffff/334155?text=Traulsen" alt="Logo Traulsen" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="https://placehold.co/150x60/ffffff/334155?text=HENNY+PENNY" alt="Logo Henny Penny" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="https://placehold.co/150x60/ffffff/334155?text=Turbo+Air" alt="Logo Turbo air" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="https://placehold.co/150x60/ffffff/334155?text=MAIGAS" alt="Logo MAIGAS" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="https://placehold.co/150x60/ffffff/334155?text=MCCALL" alt="Logo MCCALL" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="https://placehold.co/150x60/ffffff/334155?text=OPPICI" alt="Logo oppICI" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="https://placehold.co/150x60/ffffff/334155?text=BEVERAGE-AIR" alt="Logo BEVERAGE-AIR" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="https://placehold.co/150x60/ffffff/334155?text=VENTUS" alt="Logo VENTUS" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+          <div class="marca-badge bg-white border border-slate-200 rounded-lg p-3 flex items-center justify-center h-20">
+            <img src="https://placehold.co/150x60/ffffff/334155?text=BIGGI" alt="Logo BIGGI" class="logo-img max-h-full max-w-full object-contain">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APLICACIONES Y POR QUÉ ELEGIRNOS -->
+    <section class="py-20 px-6 md:px-12 bg-slate-50 fade-in border-t border-slate-200">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
+        <div>
+          <h2 class="font-bold mb-3 text-left text-2xl" style="color: rgb(0, 86, 179);">Aplicaciones Comunes</h2>
+          <p class="mb-6 text-left text-gray-600">Nuestros burletes son utilizados en:</p>
+          <div class="flex flex-col gap-3">
+            <div class="feature-item flex items-center gap-3 p-3 rounded-lg bg-white border border-slate-100 shadow-sm">
+              <i data-lucide="snowflake" class="w-6 h-6 text-blue-600 flex-shrink-0"></i><span class="text-slate-700">Cámaras de frío</span>
+            </div>
+            <div class="feature-item flex items-center gap-3 p-3 rounded-lg bg-white border border-slate-100 shadow-sm">
+              <i data-lucide="flame" class="w-6 h-6 text-blue-600 flex-shrink-0"></i><span class="text-slate-700">Hornos industriales</span>
+            </div>
+            <div class="feature-item flex items-center gap-3 p-3 rounded-lg bg-white border border-slate-100 shadow-sm">
+              <i data-lucide="utensils" class="w-6 h-6 text-blue-600 flex-shrink-0"></i><span class="text-slate-700">Equipos de procesamiento de alimentos</span>
+            </div>
+            <div class="feature-item flex items-center gap-3 p-3 rounded-lg bg-white border border-slate-100 shadow-sm">
+              <i data-lucide="cog" class="w-6 h-6 text-blue-600 flex-shrink-0"></i><span class="text-slate-700">Maquinaria de manufactura</span>
+            </div>
+            <div class="feature-item flex items-center gap-3 p-3 rounded-lg bg-white border border-slate-100 shadow-sm">
+              <i data-lucide="door-open" class="w-6 h-6 text-blue-600 flex-shrink-0"></i><span class="text-slate-700">Puertas industriales y portones</span>
+            </div>
+            <div class="feature-item flex items-center gap-3 p-3 rounded-lg bg-white border border-slate-100 shadow-sm">
+              <i data-lucide="wind" class="w-6 h-6 text-blue-600 flex-shrink-0"></i><span class="text-slate-700">Sistemas de ventilación y climatización</span>
+            </div>
+            <div class="feature-item flex items-center gap-3 p-3 rounded-lg bg-white border border-slate-100 shadow-sm">
+              <i data-lucide="wrench" class="w-6 h-6 text-blue-600 flex-shrink-0"></i><span class="text-slate-700">Equipos especiales fabricados a medida</span>
+            </div>
+          </div>
+        </div>
+        
+        <div>
+          <h2 class="font-bold mb-6 text-left text-2xl" style="color: rgb(0, 86, 179);">Por qué elegirnos</h2>
+          <div class="flex flex-col gap-4">
+            <div class="benefit-item flex items-start gap-4 p-4 border-l-4 border-blue-600 rounded-r-lg bg-blue-50">
+              <div class="w-7 h-7 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">✓</div>
+              <span class="text-slate-700">Fabricación bajo pedido según especificaciones técnicas</span>
+            </div>
+            <div class="benefit-item flex items-start gap-4 p-4 border-l-4 border-blue-600 rounded-r-lg bg-blue-50">
+              <div class="w-7 h-7 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">✓</div>
+              <span class="text-slate-700">Despacho a todo Chile</span>
+            </div>
+            <div class="benefit-item flex items-start gap-4 p-4 border-l-4 border-blue-600 rounded-r-lg bg-blue-50">
+              <div class="w-7 h-7 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">✓</div>
+              <span class="text-slate-700">Materiales de alta calidad</span>
+            </div>
+            <div class="benefit-item flex items-start gap-4 p-4 border-l-4 border-blue-600 rounded-r-lg bg-blue-50">
+              <div class="w-7 h-7 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">✓</div>
+              <span class="text-slate-700">Entrega rápida y confiable</span>
+            </div>
+            <div class="benefit-item flex items-start gap-4 p-4 border-l-4 border-blue-600 rounded-r-lg bg-blue-50">
+              <div class="w-7 h-7 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">✓</div>
+              <span class="text-slate-700">Asesoría técnica personalizada</span>
+            </div>
+            <div class="benefit-item flex items-start gap-4 p-4 border-l-4 border-blue-600 rounded-r-lg bg-blue-50">
+              <div class="w-7 h-7 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0 mt-0.5">✓</div>
+              <span class="text-slate-700">Modelos estándar y fabricación especial</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENTES CON IMÁGENES -->
+    <section class="py-20 px-6 md:px-12 fade-in">
+      <h2 class="text-center font-bold mb-10 text-2xl" style="color: rgb(0, 86, 179);">Nuestros Clientes</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
+        <!-- Reemplaza el src con la ruta de tus logos -->
+        <div class="marca-badge bg-white border border-slate-100 shadow-sm rounded-xl p-6 flex items-center justify-center h-28">
+          <img src="https://placehold.co/200x100/ffffff/334155?text=McDonald's" alt="Logo McDonald's" class="logo-img max-h-full max-w-full object-contain">
+        </div>
+        <div class="marca-badge bg-white border border-slate-100 shadow-sm rounded-xl p-6 flex items-center justify-center h-28">
+          <img src="https://placehold.co/200x100/ffffff/334155?text=Burger+King" alt="Logo Burger King" class="logo-img max-h-full max-w-full object-contain">
+        </div>
+        <div class="marca-badge bg-white border border-slate-100 shadow-sm rounded-xl p-6 flex items-center justify-center h-28">
+          <img src="https://placehold.co/200x100/ffffff/334155?text=Starbucks" alt="Logo Starbucks" class="logo-img max-h-full max-w-full object-contain">
+        </div>
+        <div class="marca-badge bg-white border border-slate-100 shadow-sm rounded-xl p-6 flex items-center justify-center h-28">
+          <img src="https://placehold.co/200x100/ffffff/334155?text=Chili's" alt="Logo Chili's" class="logo-img max-h-full max-w-full object-contain">
+        </div>
+        <div class="marca-badge bg-white border border-slate-100 shadow-sm rounded-xl p-6 flex items-center justify-center h-28">
+          <img src="https://placehold.co/200x100/ffffff/334155?text=Mamut" alt="Logo Mamut" class="logo-img max-h-full max-w-full object-contain">
+        </div>
+        <div class="marca-badge bg-white border border-slate-100 shadow-sm rounded-xl p-6 flex items-center justify-center h-28">
+          <img src="https://placehold.co/200x100/ffffff/334155?text=Juan+Maestro" alt="Logo Juan Maestro" class="logo-img max-h-full max-w-full object-contain">
+        </div>
+        <div class="marca-badge bg-white border border-slate-100 shadow-sm rounded-xl p-6 flex items-center justify-center h-28">
+          <img src="https://placehold.co/200x100/ffffff/334155?text=Tommy+Beans" alt="Logo Tommy Beans" class="logo-img max-h-full max-w-full object-contain">
+        </div>
+        <div class="marca-badge bg-white border border-slate-100 shadow-sm rounded-xl p-6 flex items-center justify-center h-28">
+          <img src="https://placehold.co/200x100/ffffff/334155?text=P.F.+Chang's" alt="Logo P.F. Chang's" class="logo-img max-h-full max-w-full object-contain">
+        </div>
+        <div class="marca-badge bg-white border border-slate-100 shadow-sm rounded-xl p-6 flex items-center justify-center h-28">
+          <img src="https://placehold.co/200x100/ffffff/334155?text=Doggis" alt="Logo Doggis" class="logo-img max-h-full max-w-full object-contain">
+        </div>
+        <div class="marca-badge bg-white border border-slate-100 shadow-sm rounded-xl p-6 flex items-center justify-center h-28">
+          <img src="https://placehold.co/200x100/ffffff/334155?text=Tu+Empresa" alt="Logo Tu Empresa" class="logo-img max-h-full max-w-full object-contain">
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 px-6 md:px-12 bg-slate-50 fade-in border-t border-slate-200">
+      <h2 class="text-center font-bold mb-10 text-2xl" style="color: rgb(0, 86, 179);">🧾 Preguntas Frecuentes</h2>
+      <div class="max-w-3xl mx-auto space-y-6">
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+          <h4 class="font-bold mb-2 text-slate-800">¿Fabrican burletes a medida?</h4>
+          <p class="text-gray-600">Sí, fabricamos según las dimensiones y especificaciones que necesite su equipo.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+          <h4 class="font-bold mb-2 text-slate-800">¿Despachan a regiones?</h4>
+          <p class="text-gray-600">Sí, enviamos a todo Chile.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-slate-100">
+          <h4 class="font-bold mb-2 text-slate-800">¿Pueden fabricar modelos especiales?</h4>
+          <p class="text-gray-600">Sí, podemos replicar o diseñar perfiles según muestra o plano técnico.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="py-20 px-6 md:px-12 fade-in">
+      <div class="max-w-3xl mx-auto rounded-2xl p-10 text-center shadow-lg" style="background: linear-gradient(135deg, rgb(0, 61, 130), rgb(0, 104, 214));">
+        <h3 class="font-bold mb-4 text-white text-xl">📞 Contacto</h3>
+        <p class="mb-6 opacity-90 text-white">¿Necesita cotizar o solicitar un modelo específico? Estamos listos para ayudarle.</p>
+        
+        <p class="mb-4 text-white font-semibold text-lg">
+          WhatsApp: 
+          <a href="https://wa.me/56923948323?text=Hola,%20necesito%20cotizar%20un%20burlete" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="hover:text-green-300 hover:underline transition-colors duration-200">
+            +56 9 2394 8323
+          </a>
+        </p>
+        
+        <p class="mb-4 text-white font-semibold text-lg">
+          Email: 
+          <a href="mailto:operaciones.bai@outlook.com" 
+             class="hover:text-blue-200 hover:underline transition-colors duration-200">
+            operaciones.bai@outlook.com
+          </a>
+        </p>
+        
+        <p class="opacity-80 text-white mt-6">Horario: Lunes a viernes, 9:00 a 18:00 hrs.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-gray-900 py-6 text-center">
+    <p class="text-gray-400">© 2026 burlete.cl - Fábrica de Burletes Industriales en Chile. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+        // Inicializar Iconos
+        lucide.createIcons();
+
+        // Animación de aparición (Fade-in) al hacer scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
