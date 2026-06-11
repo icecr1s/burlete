@@ -76,16 +76,36 @@
         <a href="/" class="flex-shrink-0 flex items-center font-bold text-2xl" style="color: rgb(0, 86, 179);">
           burlete.cl
         </a>
+        
         <div class="hidden md:flex space-x-8">
           <a href="/" class="text-blue-600 font-bold border-b-2 border-blue-600 transition-colors">Inicio</a>
           <a href="/productos/" class="text-slate-600 hover:text-blue-600 font-medium transition-colors">Nuestros Productos</a>
           <a href="/contacto/" class="text-slate-600 hover:text-blue-600 font-medium transition-colors">Contacto y FAQ</a>
         </div>
+        
         <div class="hidden md:flex">
           <a href="https://wa.me/56923948323" target="_blank" class="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition-colors shadow-sm">
             Cotizar
           </a>
         </div>
+
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-btn" class="text-slate-800 hover:text-blue-600 focus:outline-none p-2">
+            <i data-lucide="menu" id="icon-menu" class="w-7 h-7 block"></i>
+            <i data-lucide="x" id="icon-close" class="w-7 h-7 hidden"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 shadow-xl absolute w-full left-0">
+      <div class="px-4 pt-4 pb-6 space-y-3 flex flex-col">
+        <a href="/" class="block px-3 py-3 text-lg font-bold text-blue-600 bg-blue-50 rounded-lg">Inicio</a>
+        <a href="/productos/" class="block px-3 py-3 text-lg font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-lg">Nuestros Productos</a>
+        <a href="/contacto/" class="block px-3 py-3 text-lg font-medium text-slate-700 hover:text-blue-600 hover:bg-slate-50 rounded-lg">Contacto y FAQ</a>
+        <a href="https://wa.me/56923948323" target="_blank" class="block mt-4 text-center bg-blue-600 text-white px-4 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-md">
+          Cotizar ahora
+        </a>
       </div>
     </div>
   </nav>
@@ -97,7 +117,8 @@
      <i data-lucide="message-circle" class="w-8 h-8"></i>
   </a>
 
-  <div class="pt-16"></div> <header class="hero-section">
+  <div class="pt-16"></div> 
+  <header class="hero-section">
     <img loading="lazy" src="https://images.pexels.com/photos/14804699/pexels-photo-14804699.jpeg?auto=compress&cs=tinysrgb&w=1920" alt="Instalaciones industriales con maquinaria para manufactura">
     <div class="hero-content max-w-3xl mx-auto">
       <h1 class="text-5xl md:text-6xl font-extrabold mb-4 text-white">burlete.cl</h1>
@@ -191,6 +212,23 @@
 
   <script>
         lucide.createIcons();
+        
+        // Lógica del menú desplegable móvil
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const iconMenu = document.getElementById('icon-menu');
+        const iconClose = document.getElementById('icon-close');
+
+        if (btn) {
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+                iconMenu.classList.toggle('hidden');
+                iconMenu.classList.toggle('block');
+                iconClose.classList.toggle('hidden');
+                iconClose.classList.toggle('block');
+            });
+        }
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
